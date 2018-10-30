@@ -1,0 +1,7 @@
+<h3>Our Popular Policies</h3>
+<div class='card-deck'>
+    <div *ngFor='let eachPolicy of popularPolicyList' class='card'>
+        <div class='card-header' style='text-align: center'>{{eachPolicy.policyName}}</div>
+        <div class='card-body'>{{eachPolicy.description}}</div>
+    </div>
+</div>
