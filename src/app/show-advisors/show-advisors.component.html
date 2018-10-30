@@ -5,7 +5,7 @@
         <th>Name</th>
         <th>Mobile Number</th>
     </tr>
-    <tr *ngFor='let eachAdvisor of advisorList'>
+    <tr *ngFor='let eachAdvisor of advisorList let i=index'>
         <td>{{eachAdvisor.id}}</td>
         <td>{{eachAdvisor.name}}</td>
         <td>{{eachAdvisor.mobileNumber}}</td>
