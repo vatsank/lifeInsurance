@@ -1,3 +1,4 @@
+import { ComponentCommunicationService } from './../component-communication.service';
 import { PageLink } from './../page-link';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -9,9 +10,25 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MenuComponent implements OnInit {
 
       @Input() linksFromParent: PageLink[];
-  constructor() { }
+      showLogin = true;
+      showLogout = false;
+  constructor(private service: ComponentCommunicationService) { }
 
   ngOnInit() {
+
+     this.service.message.subscribe(status => {
+
+      if (status === 'logged') {
+       this.showLogout = true;
+       this.showLogin =  false;
+      }
+
+      if (status === 'logout') {
+        this.showLogout = false;
+        this.showLogin =  true;
+       }
+
+     });
   }
 
 }

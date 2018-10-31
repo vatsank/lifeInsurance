@@ -3,5 +3,8 @@
         <li *ngFor='let eachLink of linksFromParent' class='nav-item'>
             <a [href]='eachLink.linkRef' [class]='eachLink.linkStyle'>{{eachLink.linkText}}</a>
         </li>
+        <li *ngIf='showLogin' class='nav-item'><a href='' class='nav-link'>Login</a></li>
+        <li *ngIf='showLogout' class='nav-item'><a href='' class='nav-link'>Logout</a></li>
+
     </ul>
 </nav>

@@ -1,6 +1,7 @@
 import { TestimonyComponent } from './../testimony/testimony.component';
-import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { Policy } from '../policy';
+import { Testimony } from '../testimony';
 
 @Component({
   selector: 'app-content',
@@ -13,9 +14,10 @@ export class ContentComponent implements OnInit , AfterViewInit {
   @ViewChild(TestimonyComponent) compRef: TestimonyComponent;
 
   popularPolicyList: Policy[];
-  feedback1: string;
+  feedback1: Testimony;
   feedback2: string;
-  constructor() {
+  show = false;
+  constructor(private ref: ChangeDetectorRef) {
 
      this.popularPolicyList = [
        {policyName: 'Jeevan Anand', description: 'Policy with Life cover and Bonus'},
@@ -29,7 +31,13 @@ export class ContentComponent implements OnInit , AfterViewInit {
 
   ngAfterViewInit(): void {
 
-     this.feedback1 = this.compRef.getCorpCustomerFeedBack();
-     this.feedback2 = this.compRef.getRetailCustomerFeedBack();
+     this.feedback2 = this.compRef.getCorpCustomerFeedBack();
+
+     this.feedback1 = this.compRef.getRetailCustomerFeedBack();
+
+       this.ref.detectChanges();
+
+       this.show = true;
+     console.log(this.feedback1);
   }
 }

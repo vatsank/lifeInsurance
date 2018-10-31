@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Testimony } from './../testimony';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-testimony',
@@ -9,16 +10,19 @@ export class TestimonyComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 
-   getRetailCustomerFeedBack(): string {
+   getRetailCustomerFeedBack(): Testimony {
 
-    return 'Claims processing is prompt and received payment within a weeks time';
+     console.log('inside retail customer');
+    return {comment: 'Claims processing is prompt and received payment within a weeks time',
+        id: 401, name: 'Nagi Reddy', relationship: 'Jeevan Ananad Policy Holder', designation: 'Manager,Indian Bank'};
 
    }
 
-   getCorpCustomerFeedBack(): string{
+   getCorpCustomerFeedBack(): string {
 
     return 'Door step service by the advisors is very much appreciated';
    }
