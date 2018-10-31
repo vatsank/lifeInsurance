@@ -14,6 +14,7 @@ import { ShowQuoteComponent } from './show-quote/show-quote.component';
 import { MenuComponent } from './menu/menu.component';
 import { SearchBranchComponent } from './search-branch/search-branch.component';
 import { ShowBranchComponent } from './show-branch/show-branch.component';
+import { TestimonyComponent } from './testimony/testimony.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ShowBranchComponent } from './show-branch/show-branch.component';
     ShowQuoteComponent,
     MenuComponent,
     SearchBranchComponent,
-    ShowBranchComponent
+    ShowBranchComponent,
+    TestimonyComponent
   ],
   imports: [
     BrowserModule,
