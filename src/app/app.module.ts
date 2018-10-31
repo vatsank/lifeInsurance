@@ -11,6 +11,9 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShowAdvisorsComponent } from './show-advisors/show-advisors.component';
 import { ShowQuoteComponent } from './show-quote/show-quote.component';
+import { MenuComponent } from './menu/menu.component';
+import { SearchBranchComponent } from './search-branch/search-branch.component';
+import { ShowBranchComponent } from './show-branch/show-branch.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ShowQuoteComponent } from './show-quote/show-quote.component';
     ContentComponent,
     FooterComponent,
     ShowAdvisorsComponent,
-    ShowQuoteComponent
+    ShowQuoteComponent,
+    MenuComponent,
+    SearchBranchComponent,
+    ShowBranchComponent
   ],
   imports: [
     BrowserModule,

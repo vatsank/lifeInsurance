@@ -1,0 +1,18 @@
+{
+    "lifeInsurance": [
+        { "id": 101, "policyHolderName": "Ramesh", "policyAmount": 450000 },
+        { "id": 102, "policyHolderName": "Suresh", "policyAmount": 550000 },
+        { "id": 103, "policyHolderName": "Magesh", "policyAmount": 600000 },
+        { "id": 104, "policyHolderName": "Ganesh", "policyAmount": 800000 },
+        { "id": 105, "policyHolderName": "Nitin", "policyAmount": 350000 }
+
+    ],
+    "advisors": [
+        { "id": 201, "name": "Kumar", "mobileNumber": 949494949 },
+        { "id": 202, "name": "Reddy", "mobileNumber": 749494949 },
+        { "id": 203, "name": "Shiva", "mobileNumber": 649494949 },
+        { "id": 204, "name": "Mohit", "mobileNumber": 59494949 },
+        { "id": 205, "name": "Vishwa", "mobileNumber": 449494949 }
+
+    ]
+}
