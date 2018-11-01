@@ -1,0 +1,14 @@
+<table class='table table-bordered table-striped'>
+    <tr>
+        <th>ID</th>
+        <th>Policy Holder Name</th>
+        <th>Policy Amount</th>
+        <th>Maturity Date</th>
+    </tr>
+    <tr *ngFor='let eachPolicy of policyList'>
+        <td>{{eachPolicy.id}}</td>
+        <td>{{eachPolicy.policyHolderName |uppercase}}</td>
+        <td>{{eachPolicy.policyAmount | currency :'INR':'symbol'}}</td>
+        <td>{{eachPolicy.maturityDate | date :'short'}}</td>
+    </tr>
+</table>

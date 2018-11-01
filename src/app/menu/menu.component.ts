@@ -1,11 +1,12 @@
 import { ComponentCommunicationService } from './../component-communication.service';
 import { PageLink } from './../page-link';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class MenuComponent implements OnInit {
 

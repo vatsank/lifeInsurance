@@ -1,10 +1,15 @@
 {
     "lifeInsurance": [
-        { "id": 101, "policyHolderName": "Ramesh", "policyAmount": 450000 },
-        { "id": 102, "policyHolderName": "Suresh", "policyAmount": 550000 },
-        { "id": 103, "policyHolderName": "Magesh", "policyAmount": 600000 },
-        { "id": 104, "policyHolderName": "Ganesh", "policyAmount": 800000 },
-        { "id": 105, "policyHolderName": "Nitin", "policyAmount": 350000 }
+        { "id": 101, "policyHolderName": "Ramesh", "policyAmount": 450000, "maturityDate": "2020-10-12" },
+        { "id": 102, "policyHolderName": "Suresh", "policyAmount": 550000, "maturityDate": "2022-9-22" },
+        { "id": 103, "policyHolderName": "Magesh", "policyAmount": 600000, "maturityDate": "2023-8-21" },
+        { "id": 104, "policyHolderName": "Ganesh", "policyAmount": 800000, "maturityDate": "2024-7-14" },
+        {
+            "id": 105,
+            "policyHolderName": "Nitin",
+            "policyAmount": 350000,
+            "maturityDate": "2025-11-16"
+        }
 
     ],
     "advisors": [

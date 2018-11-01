@@ -1,5 +1,5 @@
 import { Testimony } from './../testimony';
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-testimony',
