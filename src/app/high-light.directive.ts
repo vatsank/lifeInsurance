@@ -4,8 +4,10 @@ import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
   selector: '[appHighLight]'
 })
 export class HighLightDirective {
-
-  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  public el: ElementRef;
+  constructor(el: ElementRef, private renderer: Renderer2) {
+    this.el = el;
+   }
 
    @HostListener('mouseover')  over() {
 

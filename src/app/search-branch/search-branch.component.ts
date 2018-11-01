@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ShowLocationComponent } from './../show-location/show-location.component';
+import { ComponentAdderService } from './../component-adder.service';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-search-branch',
@@ -9,7 +11,9 @@ export class SearchBranchComponent implements OnInit {
 
   srchCity = '';
   branchList: string[];
-  constructor() { }
+
+  @ViewChild('locationInfo', {read: ViewContainerRef}) viewRef: ViewContainerRef;
+  constructor(private service: ComponentAdderService) { }
 
   ngOnInit() {
   }
@@ -17,5 +21,25 @@ export class SearchBranchComponent implements OnInit {
     onChange(val) {
 
       this.branchList = val;
+    }
+
+    add() {
+
+        this.service.setViewRef(this.viewRef);
+       const comp = this.service.addComponent(ShowLocationComponent);
+       const locationComp = (<ShowLocationComponent>comp.instance);
+
+       locationComp.selectedLocation.subscribe(value => {
+         console.log(value);
+           this.srchCity = value;
+           if ( value.length > 0) {
+            this.remove();
+          }
+      });
+    }
+
+    remove() {
+
+      this.service.remove();
     }
 }

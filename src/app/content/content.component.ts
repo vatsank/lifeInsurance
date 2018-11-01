@@ -1,7 +1,11 @@
+import { HighLightDirective } from './../high-light.directive';
+import { FooterComponent } from './../footer/footer.component';
 import { TestimonyComponent } from './../testimony/testimony.component';
-import { Component, OnInit, AfterViewInit, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, QueryList, ChangeDetectorRef, ViewChildren } from '@angular/core';
 import { Policy } from '../policy';
 import { Testimony } from '../testimony';
+import { InfoService } from '../info.service';
+
 
 @Component({
   selector: 'app-content',
@@ -11,6 +15,7 @@ import { Testimony } from '../testimony';
 export class ContentComponent implements OnInit , AfterViewInit {
 
 
+  @ViewChild(InfoService) child: InfoService;
   @ViewChild(TestimonyComponent) compRef: TestimonyComponent;
 
   popularPolicyList: Policy[];
@@ -35,9 +40,13 @@ export class ContentComponent implements OnInit , AfterViewInit {
 
      this.feedback1 = this.compRef.getRetailCustomerFeedBack();
 
-       this.ref.detectChanges();
 
        this.show = true;
+
+console.log(this.child.getInfo());
+       this.ref.detectChanges();
+
      console.log(this.feedback1);
+
   }
 }

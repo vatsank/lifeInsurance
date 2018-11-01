@@ -3,8 +3,11 @@
 </p>
 
 <div class='form-group'>
+    <ng-template #locationInfo></ng-template>
     <label>City Name</label>
-    <input [(ngModel)]='srchCity' class='form-control'>
+    <input [(ngModel)]='srchCity' class='form-control' (focus)='add()'>
+    <input name='policy' class='form-control'>
+
 </div>
 
 <app-show-branch [cityName]='srchCity' (branches)='onChange($event)'></app-show-branch>
