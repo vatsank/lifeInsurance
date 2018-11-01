@@ -46,4 +46,20 @@ export class InsuranceAPIService {
 
     return this.http.post<PolicyDetail>(this.lifeInsuranceURL, policy, {headers: this.header});
   }
+
+  removePolicy(policy: PolicyDetail): Observable<PolicyDetail> {
+
+    const deleteURL = `${this.lifeInsuranceURL}/${policy.id}`;
+
+    return this.http.delete<PolicyDetail>(deleteURL, {headers: this.header});
+
+  }
+
+  updatePolicy(policy: PolicyDetail): Observable<PolicyDetail> {
+
+    const updateURL = `${this.lifeInsuranceURL}/${policy.id}`;
+
+    return this.http.put<PolicyDetail>(updateURL, policy, {headers: this.header});
+  }
+
 }

@@ -2,9 +2,21 @@
   "lifeInsurance": [
     {
       "id": 101,
-      "policyHolderName": "Ramesh Naidu",
+      "policyHolderName": "Ramesh",
       "policyAmount": 450000,
       "maturityDate": "2020-10-12"
+    },
+    {
+      "id": 102,
+      "policyHolderName": "Suresh",
+      "policyAmount": 550000,
+      "maturityDate": "2022-9-22"
+    },
+    {
+      "id": 103,
+      "policyHolderName": "Magesh",
+      "policyAmount": 600000,
+      "maturityDate": "2023-8-21"
     },
     {
       "id": 104,
