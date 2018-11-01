@@ -43,7 +43,7 @@ export class ContentComponent implements OnInit , AfterViewInit {
 
        this.show = true;
 
-console.log(this.child.getInfo());
+
        this.ref.detectChanges();
 
      console.log(this.feedback1);

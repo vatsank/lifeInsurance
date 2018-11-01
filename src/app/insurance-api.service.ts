@@ -1,6 +1,6 @@
 import { PolicyDetail } from './policy-detail';
 import { InsuranceAdvisor } from './insurance-advisor';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { myLogger } from './custom-decorator';
@@ -11,7 +11,12 @@ import { myLogger } from './custom-decorator';
 @myLogger()
 export class InsuranceAPIService {
 
-  baseURL = 'http://localhost:3000/'
+  baseURL = 'http://localhost:3000/';
+
+  lifeInsuranceURL = `${this.baseURL}lifeInsurance`;
+
+   header = new HttpHeaders().set('content-type', 'application/json');
+
   constructor(private http: HttpClient) { }
 
   findAllAdvisors(): Observable<InsuranceAdvisor[]> {
@@ -32,9 +37,13 @@ export class InsuranceAPIService {
 
   findAllPolicy(): Observable<PolicyDetail[]> {
 
-    const lifeInsuranceURL = `${this.baseURL}lifeInsurance`;
 
-    return this.http.get<PolicyDetail[]>(lifeInsuranceURL);
+    return this.http.get<PolicyDetail[]>(this.lifeInsuranceURL);
 
+  }
+
+  addPolicy(policy: PolicyDetail): Observable<PolicyDetail> {
+
+    return this.http.post<PolicyDetail>(this.lifeInsuranceURL, policy, {headers: this.header});
   }
 }
