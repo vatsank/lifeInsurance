@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ShowPolicyDetailsComponent implements OnInit {
 
   constructor(private service: InsuranceAPIService) { }
-
+  srchName = '';
   policyList: PolicyDetail[];
   ngOnInit() {
 

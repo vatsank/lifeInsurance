@@ -1,11 +1,15 @@
 <table class='table table-bordered table-striped'>
     <tr>
+        <td><label>Enter the Policy Holder Name </label></td>
+        <td><input [(ngModel)]='srchName'></td>
+    </tr>
+    <tr>
         <th>ID</th>
         <th>Policy Holder Name</th>
         <th>Policy Amount</th>
         <th>Maturity Date</th>
     </tr>
-    <tr *ngFor='let eachPolicy of policyList'>
+    <tr *ngFor="let eachPolicy of policyList | filter:'policyHolderName':srchName">
         <td>{{eachPolicy.id}}</td>
         <td>{{eachPolicy.policyHolderName |uppercase}}</td>
         <td>{{eachPolicy.policyAmount | currency :'INR':'symbol'}}</td>

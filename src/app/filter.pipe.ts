@@ -13,7 +13,7 @@ export class FilterPipe implements PipeTransform {
     if (!field || !value) {
       return collection;
     }
-    return collection.filter(item => item[field].includes(value));
+    return collection.filter(item => (item[field]).toLowerCase().includes(value.toLowerCase()));
   }
 
 }
