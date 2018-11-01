@@ -62,6 +62,10 @@ export class ShowPolicyDetailsComponent implements OnInit {
 
     this.buttonText = 'Update';
 
+    if(!this.toggleForm){
+
+      this.showForm();
+    }
     this.policyData = policy;
 
        console.log('update called');

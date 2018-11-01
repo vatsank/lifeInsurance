@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
@@ -45,7 +45,7 @@ import { FilterPipe } from './filter.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule, FormsModule , NgxPaginationModule
+    AppRoutingModule, HttpClientModule, FormsModule , NgxPaginationModule , ReactiveFormsModule
   ],
   providers: [HttpClient],
   entryComponents: [ShowLocationComponent],
