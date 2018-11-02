@@ -3,28 +3,9 @@
         <app-header></app-header>
     </div>
     <div style='height: 600px;' class='bodyBg'>
-        <app-content></app-content>
+        <router-outlet> </router-outlet>
     </div>
     <div style='height: 150px;' class='pageBg'>
         <app-footer></app-footer>
     </div>
 </div>
-<div>
-    <app-show-advisors></app-show-advisors>
-
-</div>
-<div>
-    <app-show-quote></app-show-quote>
-</div>
-
-<div>
-    <app-search-branch></app-search-branch>
-</div>
-<app-login></app-login>
-<app-logout></app-logout>
-<article></article>
-<button appAddElement [elementToAdd]="'h1'" [elementText]="'Added by Directive'">Add</button>
-
-<app-show-policy-details></app-show-policy-details>
-<router-outlet>
-</router-outlet>
