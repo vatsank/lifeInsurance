@@ -15,6 +15,7 @@ export class InsuranceAPIService {
 
   lifeInsuranceURL = `${this.baseURL}lifeInsurance`;
 
+  healthInsuranceURL = `${this.baseURL}healthInsurance`;
    header = new HttpHeaders().set('content-type', 'application/json');
 
   constructor(private http: HttpClient) { }
@@ -42,6 +43,12 @@ export class InsuranceAPIService {
 
   }
 
+  findAllHealthPolicy(): Observable<PolicyDetail[]> {
+
+
+    return this.http.get<PolicyDetail[]>(this.healthInsuranceURL);
+
+  }
   addPolicy(policy: PolicyDetail): Observable<PolicyDetail> {
 
     return this.http.post<PolicyDetail>(this.lifeInsuranceURL, policy, {headers: this.header});

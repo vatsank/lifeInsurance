@@ -13,6 +13,7 @@ export class ShowPolicyDetailsComponent implements OnInit {
   showUp = true;
   showDown = false;
   srchName = '';
+  page = 0;
   policyData: PolicyDetail = {
     id: 0,
     policyHolderName: '',
